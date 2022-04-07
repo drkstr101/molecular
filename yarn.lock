@@ -1528,6 +1528,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@commitlint/config-conventional@npm:^16.2.1":
+  version: 16.2.1
+  resolution: "@commitlint/config-conventional@npm:16.2.1"
+  dependencies:
+    conventional-changelog-conventionalcommits: ^4.3.1
+  checksum: 23dac76a8fbe5624433e1c948bc53eaf0a60b77f418fe7f94eea8e17abf9605d7ae9418188d8c1a38c2e6d5cb865c8e2d0894826c3eb41fb052af95e79bc02d3
+  languageName: node
+  linkType: hard
+
 "@commitlint/config-validator@npm:^16.2.1":
   version: 16.2.1
   resolution: "@commitlint/config-validator@npm:16.2.1"
@@ -2425,7 +2434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscutlery/semver@npm:^2.21.0":
+"@jscutlery/semver@npm:^2.21.6":
   version: 2.21.6
   resolution: "@jscutlery/semver@npm:2.21.6"
   dependencies:
@@ -7972,7 +7981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^4.5.0":
+"conventional-changelog-conventionalcommits@npm:^4.3.1, conventional-changelog-conventionalcommits@npm:^4.5.0":
   version: 4.6.3
   resolution: "conventional-changelog-conventionalcommits@npm:4.6.3"
   dependencies:
@@ -15061,11 +15070,12 @@ __metadata:
     "@babel/preset-env": ^7.16.11
     "@commitlint/cli": ^16.2.3
     "@commitlint/config-angular": ^16.2.3
+    "@commitlint/config-conventional": ^16.2.1
     "@cucumber/cucumber": ^7.3.2
     "@cypress/browserify-preprocessor": ^3.0.2
     "@headlessui/react": ^1.5.0
     "@heroicons/react": ^1.0.6
-    "@jscutlery/semver": ^2.21.0
+    "@jscutlery/semver": ^2.21.6
     "@next/bundle-analyzer": ^12.1.4
     "@nrwl/cli": 13.10.0
     "@nrwl/cypress": 13.10.0

@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -42,9 +43,10 @@
     "@babel/preset-env": "^7.16.11",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-angular": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@cucumber/cucumber": "^7.3.2",
     "@cypress/browserify-preprocessor": "^3.0.2",
-    "@jscutlery/semver": "^2.21.0",
+    "@jscutlery/semver": "^2.21.6",
     "@next/bundle-analyzer": "^12.1.4",
     "@nrwl/cli": "13.10.0",
     "@nrwl/cypress": "13.10.0",
