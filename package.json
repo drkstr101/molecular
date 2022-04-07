@@ -142,5 +142,9 @@
     "webpack": "^5.72.0",
     "webpack-bundle-analyzer": "^4.5.0"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "browserslist": [
+    "> 0.5%",
+    "not IE 11"
+  ]
 }
