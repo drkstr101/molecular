@@ -98,11 +98,11 @@ p {
   border-bottom: 1px solid var(--color-blue);
 }
 
-.hero-buttons {
+.hero-actions {
   margin-top: 3rem;
 }
 
-.hero-buttons .button {
+.hero-actions .button {
   margin: 0 1rem 1rem;
 }
 

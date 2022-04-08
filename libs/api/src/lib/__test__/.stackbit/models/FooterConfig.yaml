@@ -4,5 +4,5 @@ label: Footer Config
 labelField: body
 fields:
   - type: markdown
-    name: copyright
-    label: Copyright Text
+    name: body
+    label: Footer Text

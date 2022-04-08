@@ -1,4 +1,3 @@
-const withSourcebit = require('sourcebit').sourcebitNext();
 const analyzer = require('@next/bundle-analyzer');
 const withNx = require('@nrwl/next/plugins/with-nx');
 const withPreact = require('next-plugin-preact');
@@ -7,6 +6,9 @@ const withPWA = require('next-pwa');
 const withBundleAnalyzer = analyzer({
   enabled: process.env['ANALYZE'] === 'true'
 });
+
+const sourcebitConfig = require('../../sourcebit.js');
+const withSourcebit = require('sourcebit').sourcebitNext({ config: sourcebitConfig });
 
 /**
  * @type {WithNxOptions}
