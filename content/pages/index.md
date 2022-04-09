@@ -7,7 +7,7 @@ sections:
     subheading: >
       You've just [unlocked visual editing
       capabilities](https://www.stackbit.com/) in this Next.js app.
-    buttons:
+    actions:
       - label: Start Building
         url: 'https://docs.stackbit.com/getting-started/'
         theme: primary
@@ -18,7 +18,7 @@ sections:
     heading: Jump to Topic
     subheading: |
       Or jump right to a specific topic to help you build your site.
-    cards:
+    items:
       - heading: How Stackbit Works →
         subheading: |
           Follow an end-to-end guide to learn the inner-workings of Stackbit.

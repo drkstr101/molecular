@@ -11,7 +11,7 @@ fields:
   - type: markdown
     name: subheading
   - type: list
-    name: cards
+    name: items
     items:
       type: model
       models: [Card]
