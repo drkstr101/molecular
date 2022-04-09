@@ -21,7 +21,9 @@ setup:
 
 lint:
 	nx format
+	nx workspace-lint
 	nx run-many --all --target lint --verbose
+	stackbit validate
 
 test:
 	nx run-many --all --target test -u --coverage --verbose

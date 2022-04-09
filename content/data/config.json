@@ -3,6 +3,6 @@
   "title": "Stackbit",
   "footer": {
     "type": "FooterConfig",
-    "body": "Made by [Stackbit](https://www.stackbit.com/)\n"
+    "copyright": "Made by [Stackbit](https://www.stackbit.com/)\n"
   }
 }

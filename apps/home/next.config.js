@@ -1,4 +1,5 @@
 const analyzer = require('@next/bundle-analyzer');
+const sourcebit = require('sourcebit');
 const withNx = require('@nrwl/next/plugins/with-nx');
 const withPreact = require('next-plugin-preact');
 const withPWA = require('next-pwa');
@@ -8,7 +9,7 @@ const withBundleAnalyzer = analyzer({
 });
 
 const sourcebitConfig = require('../../sourcebit.js');
-const withSourcebit = require('sourcebit').sourcebitNext({ config: sourcebitConfig });
+const withSourcebit = sourcebit.sourcebitNext({ config: sourcebitConfig });
 
 /**
  * @type {WithNxOptions}
@@ -30,9 +31,7 @@ const nextConfig = {
   // env: { WA_HOME_URL, WA_EXPO_URL, WA_CONTACT_URL },
   images: {
     domains: [
-      'watheia.io',
       'images.unsplash.com',
-      'www.datocms-assets.com',
       'localhost' // For Strapi
     ],
     imageSizes: [24, 64, 128]

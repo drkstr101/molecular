@@ -1,2 +1,4 @@
-import { sourcebitDataClient } from 'sourcebit-target-next';
-export default sourcebitDataClient;
+import { sourcebitDataClient, SourcebitDataClient } from 'sourcebit-target-next';
+
+const _client: SourcebitDataClient = sourcebitDataClient;
+export default _client;

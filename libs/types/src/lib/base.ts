@@ -5,7 +5,7 @@ import { Maybe } from './maybe';
  * instantiation, and contains information pertaining
  * to the model AST.
  */
-export interface Metadata {
+export interface Metadata extends Record<string, unknown> {
   readonly id: string;
   readonly source: string;
   readonly modelType: string;
@@ -21,6 +21,7 @@ export interface Metadata {
  * Base type for all stackbit models.
  */
 export interface IModel {
+  readonly type: string;
   readonly __metadata: Metadata;
 }
 
@@ -36,10 +37,8 @@ export interface IPage extends IModel {
 /**
  * A trait applied to all block elements
  */
-export interface IBlockElement extends IModel {
-  readonly ref: Maybe<string>;
-  readonly slot: Maybe<string>;
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface IBlockElement extends IModel {}
 
 /**
  * A trait applied to clickable actions, such as a

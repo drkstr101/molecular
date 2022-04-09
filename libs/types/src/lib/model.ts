@@ -5,13 +5,14 @@ import { IActionElement, IBlockElement, IModel, IPage, ISectionElement } from '.
  */
 export interface SiteConfigModel extends IModel {
   readonly title: string;
+  readonly footer: FooterConfigModel;
 }
 
 /**
- * Contains any global context data available to all pages
+ * Contains the footer config options
  */
 export interface FooterConfigModel extends IModel {
-  readonly title: string;
+  readonly copyright: string;
 }
 
 /**
@@ -51,7 +52,7 @@ export interface CardModel extends IBlockElement {
  * an evenly spaced responsive grid.
  */
 export interface CardGridSectionModel extends ISectionElement {
-  readonly items: IBlockElement[];
+  readonly items: CardModel[];
 }
 
 /**
@@ -61,4 +62,12 @@ export interface CardGridSectionModel extends ISectionElement {
  */
 export interface HeroSectionModel extends ISectionElement {
   readonly actions: IActionElement[];
+}
+
+/**
+ * The top level context props available to each page
+ */
+export interface LayoutContext<P extends IPage = PageModel> {
+  page: P;
+  site: SiteConfigModel;
 }

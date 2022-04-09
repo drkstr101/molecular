@@ -14,8 +14,6 @@ export type {
   FooterConfigModel,
   HeroSectionModel,
   PageModel,
-  SiteConfigModel
+  SiteConfigModel,
+  LayoutContext
 } from './lib/model';
-
-export { BlockType } from './lib/BlockType';
-export { LayoutType } from './lib/LayoutType';

@@ -1,7 +1,7 @@
 type: object
 name: FooterConfig
 label: Footer Config
-labelField: body
+labelField: copyright
 fields:
   - type: markdown
     name: copyright

@@ -17,6 +17,7 @@
     "paths": {
       "@watheia/molecular.api": ["libs/api/src/index.ts"],
       "@watheia/molecular.types": ["libs/types/src/index.ts"],
+      "@watheia/molecular.ui": ["libs/ui/src/index.ts"],
       "@watheia/molecular.utils": ["libs/utils/src/index.ts"]
     }
   },
