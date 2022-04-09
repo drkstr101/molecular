@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // instantiate api from current data cache
   const api = new MolecularApi(await sourcebitDataClient.getData());
 
-  // build the current path from slug paramss
+  // build the current path from slug params
   const urlPath = params.slug
     ? typeof params.slug === 'string'
       ? params['slug']

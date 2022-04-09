@@ -16,34 +16,26 @@
 
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
+/**
+ * Set branding assets.
+ * See: https://realfavicongenerator.net/
+ */
 export default class WaNextDocument extends Document {
   override render() {
     return (
       <Html lang="en">
         <Head>
-          <meta name="application-name" content="Watheia Labs" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-          <meta name="apple-mobile-web-app-title" content="Watheia Labs" />
-          <meta name="description" content="A capabilities test of the modern web" />
-          <meta name="format-detection" content="telephone=no" />
-          <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="msapplication-config" content={'browserconfig.xml'} />
-          <meta name="msapplication-TileColor" content="#111" />
-          <meta name="msapplication-tap-highlight" content="no" />
-          <meta name="theme-color" content="#111" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0554f2" />
+          <meta name="apple-mobile-web-app-title" content="Molecular Design" />
+          <meta name="application-name" content="Molecular Design" />
+          <meta name="msapplication-TileColor" content="#a0f2f2" />
+          <meta name="theme-color" content="#a0f2f2" />
 
-          <link rel="apple-touch-icon" href={'apple-touch-icon.png'} />
-
-          <link rel="icon" type="image/png" sizes="32x32" href={'favicon-32x32.png'} />
-          <link rel="icon" type="image/png" sizes="16x16" href={'favicon-16x16.png'} />
-          <link rel="manifest" href={'manifest.json'} />
-          <link rel="mask-icon" href={'safari-pinned-tab.svg'} color="#5bbad5" />
-          <link rel="shortcut icon" href={'favicon.ico'} />
-
-          {/* Add spectrum fonts */}
-          {/* <link rel="stylesheet" href="https://use.typekit.net/uma8ayv.css" /> */}
-
+          {/* Set ld+json metadata */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -51,21 +43,20 @@ export default class WaNextDocument extends Document {
                 '@context': 'http://schema.org',
                 '@type': 'Article',
                 author: 'Watheia Labs, LLC',
-                headline: 'A capabilities test of the modern web',
-                description:
-                  'Watheia Labs is an open-source showcase of best practices on developing modern, real-time serverless web applications.',
-                image: 'https://www.datocms-assets.com/64528/1646636351-logo-alt.png',
+                headline: 'Molecular Design',
+                description: 'A monorepo Stackbit theme for the enterprise.',
+                image: 'https://www.datocms-assets.com/64528/1649322075-molecular.jpg',
                 publisher: {
                   '@type': 'Organization',
                   url: 'https://molecular.vercel.app',
                   name: 'Watheia',
-                  logo: 'https://www.datocms-assets.com/64528/1646636342-icon.png'
+                  logo: 'https://www.datocms-assets.com/64528/1649322075-molecular.jpg'
                 }
               })
             }}
           />
         </Head>
-        <body data-theme="wireframe">
+        <body data-theme="business">
           <Main />
           <NextScript />
         </body>

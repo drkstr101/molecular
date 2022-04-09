@@ -7,8 +7,8 @@ MAKE := make
 ci:
 	$(MAKE) setup
 	$(MAKE) lint
-	$(MAKE) test
 	$(MAKE) build
+	$(MAKE) test
 
 clean:
 	rm -rf yarn.lock coverage/ tmp/ dist/ node_modules/ **/__snapshots__/
