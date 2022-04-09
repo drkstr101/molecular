@@ -9,8 +9,8 @@ fields:
     name: heading
   - type: markdown
     name: subheading
-  - type: list
-    name: buttons
+  - name: actions
+    type: list
     items:
       type: model
       models: [Button]

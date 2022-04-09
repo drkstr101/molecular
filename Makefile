@@ -1,4 +1,4 @@
-.PHONY: setup clean format lint test build start ci dato-export docs
+.PHONY: ci clean setup lint test build start
 
 SHELL := /bin/bash
 PATH := ./node_modules/.bin:$(HOME)/bin:$(PATH)
@@ -6,40 +6,52 @@ MAKE := make
 
 ci:
 	$(MAKE) setup
-	$(MAKE) format
 	$(MAKE) lint
-	$(MAKE) test
 	$(MAKE) build
+	$(MAKE) test
 
 clean:
-	rm -rf yarn.lock coverage/ dist/ public/ node_modules/ **/__snapshots__/ apps/**/.cache/
+	rm -rf yarn.lock coverage/ tmp/ dist/ node_modules/ **/__snapshots__/
 	yarn cache clean
-
-analyze:
-	ANALYZE=true nx build home --verbose
+	rm .sourcebit-nextjs-cache.json
 
 setup:
 	yarn install
-
-format:
-	nx format
+	@echo '{ "objects": [], "props": {}, "pages": [] }' > .sourcebit-nextjs-cache.json
 
 lint:
-	nx run-many --all --target lint
+	nx format
+	nx workspace-lint
+	nx run-many --all --target lint --verbose
+	stackbit validate
 
 test:
-	nx run-many --all --target test
+	nx run-many --all --target test -u --coverage --verbose
 
 build:
-	nx run-many --all --target test
+	nx run-many --all --target build --verbose
 
-home:
-	nx build home --prod --verbose
-
-
-# Run all in parallel
 start:
 	nx run-many --all --target serve --parallel
+
+# Application targets
+####
+
+home:
+	nx run home:build:production --verbose
+
+blog:
+	@echo 'TODO Not implemented.'
+	exit 1
+
+docs:
+	@echo 'TODO Not implemented.'
+	exit 1
+
+expo:
+	@echo 'TODO Not implemented.'
+	exit 1
+
 
 
 

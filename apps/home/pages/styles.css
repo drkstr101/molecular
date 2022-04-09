@@ -1,150 +1,114 @@
 @tailwind components;
 @tailwind base;
 @tailwind utilities;
-
-html {
-  -webkit-text-size-adjust: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  touch-action: manipulation;
-  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-  background-color: hsl(var(--b1));
-  color: hsl(var(--bc));
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+:root {
+  --color-white: hsl(var(--b1));
+  --color-black: hsl(var(--bc));
+  --color-gray-100: hsl(var(--s));
+  --color-gray-500: hsl(var(--sf));
+  --color-red: hsl(var(--er));
+  --color-blue: hsl(var(--in));
+  --color-yellow: hsl(var(--wa));
 }
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: currentColor;
-}
-
+html,
 body {
-  position: relative;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   margin: 0;
   padding: 0;
-  direction: ltr;
-  width: 100%;
-  height: 100%;
-  font-feature-settings: 'kern';
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-  background-color: hsl(var(--b1));
-  color: hsl(var(--bc));
 }
 
-svg {
-  text-rendering: optimizeLegibility;
-  shape-rendering: crispEdges;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1rem 0;
 }
 
-svg path,
-svg circle {
-  shape-rendering: geometricprecision;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-[data-reach-skip-link] {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
+p {
+  margin-bottom: 1rem;
 }
 
-[data-reach-skip-link]:focus {
-  padding: 1rem;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  background: #fff;
-  z-index: 1;
-  width: auto;
-  height: auto;
-  clip: auto;
+* {
+  box-sizing: border-box;
 }
 
 /* --- Page --- */
 
-/* .page-container {
+.page-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-} */
+}
 
-/* .page-footer {
+.page-footer {
   margin-top: auto;
-} */
+}
 
 /* --- Footer --- */
 
-/* .footer-container {
+.footer-container {
   border-top: 1px solid var(--color-gray-100);
   padding: 1rem;
   text-align: center;
   margin-top: 2rem;
-} */
+}
 
-/* .footer-content {
+.footer-content {
   margin: 0 auto;
   max-width: 24rem;
-} */
+}
 
-/* .footer-content a {
+.footer-content a {
   color: var(--color-blue);
   border-bottom: 1px solid var(--color-blue);
-} */
+}
 
 /* --- HeroSection --- */
 
-/* .hero-container {
+.hero-container {
   padding: 8rem 2rem;
   text-align: center;
-} */
+}
 
-/* .hero-heading {
+.hero-heading {
   font-size: 3rem;
-} */
+}
 
-/* .hero-subheading {
+.hero-subheading {
   font-size: 1.25rem;
   max-width: 36rem;
   line-height: 1.5;
   margin: 0 auto;
-} */
+}
 
-/* .hero-subheading a {
+.hero-subheading a {
   color: var(--color-blue);
   border-bottom: 1px solid var(--color-blue);
-} */
+}
 
-/* .hero-buttons {
+.hero-actions {
   margin-top: 3rem;
-} */
+}
 
-/* .hero-buttons .button {
+.hero-actions .button {
   margin: 0 1rem 1rem;
-} */
+}
 
 /* --- CardGrid --- */
 
-/* .card-grid-container {
+.card-grid-container {
   margin: 0 auto;
   max-width: 48rem;
 }
@@ -170,29 +134,29 @@ svg circle {
   .card-grid-cards {
     grid-template-columns: 1fr 1fr;
   }
-} */
+}
 
 /* --- Card --- */
 
-/* .card-container {
+.card-container {
   border: 2px solid var(--color-gray-500);
   padding: 1rem;
   transition: all 0.35s ease;
-} */
+}
 
-/* .card-container:hover {
+.card-container:hover {
   border-color: var(--color-blue);
   color: var(--color-blue);
-} */
+}
 
-/* .card-subheading {
+.card-subheading {
   line-height: 1.5;
   margin: 0;
-} */
+}
 
 /* --- Button --- */
 
-/* .button {
+.button {
   display: inline-block;
   background-color: var(--color-blue);
   border: 0.125rem solid var(--color-blue);
@@ -200,13 +164,13 @@ svg circle {
   color: var(--color-white);
   padding: 1rem 3rem;
   transition: all 0.35s ease;
-} */
+}
 
-/* .button:hover {
+.button:hover {
   opacity: 0.85;
-} */
+}
 
-/* .button.theme-secondary {
+.button.theme-secondary {
   background-color: var(--color-white);
   color: var(--color-blue);
-} */
+}
