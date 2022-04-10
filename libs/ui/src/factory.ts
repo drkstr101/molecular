@@ -20,5 +20,8 @@ export function renderElement<T extends IBlockElement>(model: T, props: DynamicP
   const C = components[model.type as Key] as ComponentType<
     IBlockElement & JSX.IntrinsicAttributes
   >;
+  if (!C) {
+    throw new Error(`No component registered for type (${model.type})`);
+  }
   return createElement(C, { ...model, ...props });
 }

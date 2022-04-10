@@ -5,3 +5,5 @@
 /coverage
 /yarn.lock
 /tmp
+
+sw.js

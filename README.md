@@ -28,6 +28,14 @@ theme suitable for enterprise use-cases.
 3. [x] Advanced GitHub workflow setup to enhance pull requests with build statistics, test results, and a unique preview URL
 4. [x] Full static analysis support (see bellow).
 
+### Pull Reqiest
+
+![pull request](./docs/screenshot-pull-request.png)
+
+### Nx Cloud
+
+![nx cloud](./docs/screenshot-nx-cloud.png)
+
 ## Workspace Contents
 
 ## Module Graph
