@@ -3,6 +3,7 @@
 SHELL := /bin/bash
 PATH := ./node_modules/.bin:$(HOME)/bin:$(PATH)
 MAKE := make
+NX_BRANCH := dev
 
 ci:
 	$(MAKE) setup
@@ -21,24 +22,24 @@ setup:
 
 lint:
 	nx format
-	nx workspace-lint
-	nx run-many --all --target lint --verbose
+	NX_BRANCH=$(NX_BRANCH) nx workspace-lint
+	NX_BRANCH=$(NX_BRANCH) nx run-many --all --target lint --verbose
 	stackbit validate
 
 test:
-	nx run-many --all --target test -u --coverage --verbose
+	NX_BRANCH=$(NX_BRANCH) nx run-many --all --target test -u --coverage --verbose
 
 build:
-	nx run-many --all --target build --verbose
+	NX_BRANCH=$(NX_BRANCH) nx run-many --all --target build --verbose
 
 start:
-	nx run-many --all --target serve --parallel
+	NX_BRANCH=$(NX_BRANCH) nx run-many --all --target serve --parallel
 
 # Application targets
 ####
 
 home:
-	nx run home:build:production --verbose
+	NX_BRANCH=$(NX_BRANCH) nx run home:build:production --verbose
 
 blog:
 	@echo 'TODO Not implemented.'
@@ -53,5 +54,14 @@ expo:
 	exit 1
 
 
+# Dev targets
+####
 
+depgraph:
+	depcruise . \
+		--config .dependency-cruiser.js  \
+		--output-type dot \
+		--output-to docs/depgraph.dot --prefix "https://github.com/drkstr101/molecular/blob/main/"
+	cat docs/depgraph.dot | dot -T svg > docs/depgraph.svg.tmp
+	mv docs/depgraph.svg.tmp docs/depgraph.svg
 
