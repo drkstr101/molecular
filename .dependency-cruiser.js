@@ -148,6 +148,7 @@ module.exports = {
           '(^|/)jest\\.(config|setup|preset)\\.(js|cjs|mjs|ts|json)$',
           '(^|/)(next|babel|webpack)\\.config\\.(js|cjs|mjs|ts|json)$',
           '(^|/)tailwind-presets\\.config\\.js',
+          '(^|/)sourcebit\\.js',
           '(^|/)tools/generators/'
         ]
       },
@@ -237,7 +238,17 @@ module.exports = {
     tsPreCompilationDeps: true,
 
     /* list of extensions (typically non-parseable) to scan. Empty by default. */
-    extraExtensionsToScan: ['.json', '.jpg', '.png', '.svg', '.webp'],
+    extraExtensionsToScan: [
+      '.json',
+      '.jpg',
+      '.png',
+      '.svg',
+      '.webp',
+      '.md',
+      '.mdx',
+      '.yml',
+      '.yaml'
+    ],
 
     /* if true combines the package.jsons found from the module up to the base
        folder the cruise is initiated from. Useful for how (some) mono-repos
