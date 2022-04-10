@@ -26,7 +26,7 @@ function flattenMarkdownData() {
         return {
           __metadata: model.__metadata,
           ...model.frontmatter,
-          content: model.markdown ?? null
+          content: model.markdown || null
         };
       }
       return model;
