@@ -18,7 +18,6 @@ clean:
 
 setup:
 	yarn install
-	@echo '{ "objects": [], "props": {}, "pages": [] }' > .sourcebit-nextjs-cache.json
 
 lint:
 	nx format
